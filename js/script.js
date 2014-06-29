@@ -1,4 +1,3 @@
-/* create some data in the form of a JSON object you can consume and loop through */
 var contacts = {
     "addressBook" : [
         {
@@ -16,17 +15,16 @@ var contacts = {
     ]
 };
 
-/* cache some initial variables */
 var object = contacts.addressBook;
 var contactsCount = object.length;
-var target = document.getElementsByTagName("body")[0];
+var target = document.getElementById("list");
 var i; 
 
 if(contactsCount > 0) {
     for (i = 0; i < contactsCount; i = i + 1) {
-        var item = object[i],
-            name = item.name,
-            email = item.email;
+        var item = object[i];
+        var name = item.name;
+        var email = item.email;
         
         if(name === "hillisha"){
             target.innerHTML += '<p><a href="mailto:'+ email +'">' + name + '</a>!</p>';
@@ -38,6 +36,5 @@ if(contactsCount > 0) {
             target.innerHTML += '<p><a href="mailto:'+ email +'">' + name + '</a></p>';
         
         } 
-
     } 
 }
