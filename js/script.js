@@ -2,15 +2,15 @@
 var contacts = {
     "addressBook" : [
     {
-        "name": "Abe Lincoln",
+        "name": "abe lincoln",
         "email": "honest.abe@example.com",
     },
     {
-        "name": "John Adams",
+        "name": "john adams",
         "email": "j.adamz@example.com",
     },
     {
-        "name": "George Washington",
+        "name": "george washington",
         "email": "mr.president.washington@example.com",
     }
     ]
@@ -64,17 +64,7 @@ var adr = {
 
 searchField.addEventListener("keyup", adr.search, false);
 
-// click/tab in
-searchField.addEventListener("focus",adr.addActiveSession,false);
-
-// click/tab out 
-searchField.addEventListener("blur",adr.removeActiveSession,false);
-
 getAllButton.addEventListener("click", adr.getAllContacts, false);
-
-searchForm.addEventListener("mouseover",adr.addHoverClass,false);
-
-searchForm.addEventListener("mouseout",adr.removeHoverClass,false);
 
 searchField.addEventListener("submit",adr.search,false);
 

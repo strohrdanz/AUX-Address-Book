@@ -5,10 +5,10 @@
     <title>Address Book</title>
     <style>
         .active { 
-        	background:#ddd; 
+        	background:#abc; 
         }
         .hovering { 
-        	background:#eee; 
+        	background:#def; 
         }
         form div { 
         	padding:10px; 
@@ -22,20 +22,18 @@
 <form action="" method="get" id="search">
     
     <div>
-        <label for="input">Search address book</label>
+        <label for="input">Search:</label>
         <input type="search" id="input" name="input">
     </div>
     
-    <div class="button-group">
-        <button type="submit" id="search-btn">search</button>
+    <div class="buttons">
         <button type="button" id="getall">get all contacts</button>
-    </div><!--/.button-group-->
+    </div>
     
 </form>
 
-<div id="list"></div><!--/#output-->
+<div id="list"></div>
 
-<!-- Keeping JS at the bottom, because we rock at performance -->
 <script src="js/script.js"></script>
 
 </body>
