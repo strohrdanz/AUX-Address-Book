@@ -4,14 +4,8 @@
     <meta charset="utf-8">
     <title>Address Book</title>
     <style>
-        .active { 
-        	background:#abc; 
-        }
-        .hovering { 
-        	background:#def; 
-        }
         form div { 
-        	padding:10px; 
+            padding:10px; 
         }
     </style>
 </head>
@@ -23,16 +17,16 @@
     
     <div>
         <label for="input">Search:</label>
-        <input type="search" id="input" name="input">
+        <input type="search" id="input" name="input" role="searchbar">
     </div>
     
     <div class="buttons">
-        <button type="button" id="getall">get all contacts</button>
+        <button type="button" id="getall" role="listall">list all contacts</button>
     </div>
     
 </form>
 
-<div id="list"></div>
+<div id="list" role="displaycontacts"></div>
 
 <script src="js/script.js"></script>
 
