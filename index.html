@@ -1,61 +1,39 @@
-<!-- <html>
-<head>
-	<title>Address Book</title>
-	<style>
-	#list {
-		border: 1px solid red;
-	}
-	#placeholder {
-		border: 1px solid blue;
-	}
-	</style>
-</head>
-<body>
-	<form id="address">
-		<input type="text" id="search">
-	</form>	
-
-	<div id="list"></div>
-
-	<div id=""
-
-<script src="js/script.js"></script>
-</body>
-</html> -->
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    
     <meta charset="utf-8">
-    <title>Address Book Application</title>
+    <title>Address Book</title>
     <style>
-        .active { background:#ddd; }
-        .hovering { background:#eee; }
-        form > div { padding:10px; }
+        .active { 
+        	background:#ddd; 
+        }
+        .hovering { 
+        	background:#eee; 
+        }
+        form div { 
+        	padding:10px; 
+        }
     </style>
 </head>
 <body>
 
 <h1>Address Book</h1>
 
-<!-- ideally you would have this hooked up to a PHP (any backend) processing page so it works without JavaScript as well, but we won't get into that -->
-
-<form action="" method="get" id="search-form">
+<form action="" method="get" id="search">
     
     <div>
-        <label for="q">Search address book</label>
-        <input type="search" id="q" name="q" required placeholder="type a name" autocomplete="off">
+        <label for="input">Search address book</label>
+        <input type="search" id="input" name="input">
     </div>
     
     <div class="button-group">
         <button type="submit" id="search-btn">search</button>
-        <button type="button" id="get-all">get all contacts</button>
+        <button type="button" id="getall">get all contacts</button>
     </div><!--/.button-group-->
     
 </form>
 
-<div id="output"></div><!--/#output-->
+<div id="list"></div><!--/#output-->
 
 <!-- Keeping JS at the bottom, because we rock at performance -->
 <script src="js/script.js"></script>
