@@ -7,7 +7,7 @@ var contacts = {
     },
     {
         "name": "john adams",
-        "email": "j.adamz@example.com",
+        "email": "j.adams@example.com",
     },
     {
         "name": "george washington",
