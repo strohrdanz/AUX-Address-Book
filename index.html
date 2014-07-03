@@ -17,16 +17,17 @@
     
     <div>
         <label for="input">Search:</label>
-        <input type="search" id="input" name="input" role="searchbar">
+        <input type="search" id="input" name="input">
     </div>
     
     <div class="buttons">
-        <button type="button" id="getall" role="listall">list all contacts</button>
+        <button type="button" id="getall">list all contacts</button>
     </div>
     
 </form>
 
-<div id="list" role="displaycontacts"></div>
+
+<div id="list" aria-atomic ="true" aria-live="polite" aria-relevant=" additions removals"></div>
 
 <script src="js/script.js"></script>
 
