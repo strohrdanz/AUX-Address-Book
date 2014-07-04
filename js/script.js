@@ -31,7 +31,6 @@ function ajaxCall(dataURL, outputElement, callback) {
 } // end ajaxCall
 
 (function(){
->>>>>>> sprint2
 
 var searchForm = document.getElementById("search"),
     searchField = document.getElementById("input"),
