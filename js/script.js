@@ -1,25 +1,4 @@
-<<<<<<< HEAD
 (function(){
-<<<<<<< HEAD
-=======
-var contacts = {
-    "addressBook" : [
-    {
-        "name": "abe lincoln",
-        "email": "honest.abe@example.com",
-    },
-    {
-        "name": "john adams",
-        "email": "j.adams@example.com",
-    },
-    {
-        "name": "george washington",
-        "email": "mr.president.washington@example.com",
-    }
-    ]
-};
->>>>>>> sprint2
-=======
 function getHTTPObject() {
 
     var xhr;
