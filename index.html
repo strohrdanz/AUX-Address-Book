@@ -4,9 +4,15 @@
     <meta charset="utf-8">
     <title>Address Book</title>
     <style>
-        form div { 
-            padding:10px; 
-        }
+    .active {
+        background: #cde;
+    }
+    .hovering {
+         background: #abc;
+    }
+    form div { 
+        padding:10px; 
+    }
     </style>
 </head>
 <body>
@@ -16,19 +22,20 @@
 <form action="" method="get" id="search">
     
     <div>
-        <label for="input">Search:</label>
+        <label for="input">search:</label>
         <input type="search" id="input" name="input">
     </div>
     
     <div class="buttons">
+        <button type="submit" id="searchbtn">search</button>
         <button type="button" id="getall">list all contacts</button>
     </div>
     
 </form>
-<div id="output"></div>
 
-<div id="list" aria-atomic="true" aria-live="polite" aria-relevant="additions removals"></div>
+<div id="output" aria-atomic="true" aria-live="polite"></div>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>
