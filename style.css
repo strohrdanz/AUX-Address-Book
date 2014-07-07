@@ -17,11 +17,11 @@ h1 {
 
 a {
     text-decoration: none;
-    color: #C0D9D9;
+    color: #5F9F9F;
 }
 
 a:hover {
-    color: #E0EEEE;
+    color: #C0D9D9;
 }
 
 .active {
