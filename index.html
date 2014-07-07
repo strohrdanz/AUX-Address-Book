@@ -2,40 +2,37 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
     <title>Address Book</title>
-    <style>
-    .active {
-        background: #cde;
-    }
-    .hovering {
-         background: #abc;
-    }
-    form div { 
-        padding:10px; 
-    }
-    </style>
 </head>
 <body>
+
+<div id="wrapper">
 
 <h1>Address Book</h1>
 
 <form action="" method="get" id="search">
     
-    <div>
-        <label for="input">search:</label>
+    <div id="searchbar">
+        <label for="input">Search:</label>
         <input type="search" id="input" name="input">
     </div>
     
     <div class="buttons">
-        <button type="submit" id="searchbtn">search</button>
-        <button type="button" id="getall">list all contacts</button>
+        <button type="submit" id="searchbtn">Search</button>
+        <button type="button" id="getall">List All Contacts</button>
     </div>
     
 </form>
 
 <div id="output" aria-atomic="true" aria-live="polite"></div>
 
+<div id="output2" aria-atomic="true" aria-live="polite"></div>
+
+</div>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/addressbook.js"></script>
 <script src="js/script.js"></script>
 
 </body>

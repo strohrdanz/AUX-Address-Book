@@ -1,0 +1,32 @@
+#wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.active {
+    background: #cde;
+}
+
+.hovering {
+     background: #abc;
+}
+
+#searchbar { 
+    padding: 10px 5px; 
+}
+
+form, #searchbar {
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+

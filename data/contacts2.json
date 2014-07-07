@@ -1,0 +1,20 @@
+{
+    "addressBook": [
+        {
+            "name": "Sam P",
+            "email": "sam@example.com"
+        },
+        {
+            "name": "Jon",
+            "email": "jon@example.com"
+        },
+        {
+            "name": "Sarah",
+            "email": "sarah@example.com"
+        },
+        {
+            "name": "Jared",
+            "email": "jared@example.com"
+        }
+    ]
+}
