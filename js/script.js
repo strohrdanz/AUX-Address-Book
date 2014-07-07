@@ -1,6 +1,6 @@
 $(document).ready(function(){  
     $("body").addressBook({
-        file: "data/contacts1.json",
+        file: "data/contacts2.json",
         outputElement: "#output"
     });
 });
