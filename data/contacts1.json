@@ -1,0 +1,16 @@
+{
+    "addressBook": [
+        {
+            "name": "Abe Lincoln",
+            "email": "honest.abe@example.com"
+        },
+        {
+            "name": "John Adams",
+            "email": "j.adams@example.com"
+        },
+        {
+            "name": "George Washington",
+            "email": "mr.president.washington@example.com"
+        }
+    ]
+}

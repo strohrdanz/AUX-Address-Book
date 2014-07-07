@@ -15,16 +15,18 @@ var addr = {
 
         $.getJSON(options.file, function (data) {
 
-            var searchValue = $("#input").val(),
+            var searchValue = $("#input").val().toLowerCase(),
                 addrBook = data.addressBook,
                 count = addrBook.length,
                 outputElement = options.outputElement;
+
+                console.log(searchValue);
 
             $(outputElement).empty();
 
             if (count > 0 && searchValue !== "") {
                 $.each(addrBook, function (i, obj) {
-                    var isItFound = obj.name.indexOf(searchValue);
+                    var isItFound = obj.name.toLowerCase().indexOf(searchValue);
                     if(isItFound !== -1) {
                         $(outputElement).append('<p>' + obj.name + ', <a href="mailto:' + obj.email + '">'+ obj.email +'</a><p>');
                     }
