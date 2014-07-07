@@ -25,11 +25,11 @@ a:hover {
 }
 
 .active {
-    background: #cde;
+    background: #C0D9D9;
 }
 
 .hovering {
-     background: #abc;
+     background: #E0EEEE;
 }
 
 #searchbar { 
