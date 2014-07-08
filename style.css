@@ -1,6 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Average);
+
 body {
     background: #B4CDCD;
     margin: 0;
+    font-family: 'Average', serif;
 }
 
 #wrapper {
@@ -40,10 +43,9 @@ a:hover {
     background: #f2f2f2;
 }
 
-form, #searchbar {
+a, form, #searchbar {
     -webkit-transition-duration: 200ms;
     -moz-transition-duration: 200ms;
     -o-transition-duration: 200ms;
     transition-duration: 200ms;
 }
-
