@@ -6,24 +6,6 @@ $.fn.addressBook = function(options) {
         outputElement: "#output"
     };
 
-<<<<<<< HEAD
-    var options = $.extend(defaults, options);
-
-    return this.each(function(){
-var addr = {
-    search : function(event){
-        event.preventDefault();
-
-        $.getJSON(options.file, function (data) {
-
-            var searchValue = $("#input").val().toLowerCase(),
-                addrBook = data.addressBook,
-                count = addrBook.length,
-                outputElement = options.outputElement;
-
-                console.log(searchValue);
-
-=======
     var now = Date.now();
     console.log(now);
 
@@ -52,21 +34,12 @@ var addr = {
                 outputElement = options.outputElement,
                 filteredData = {"addressBook": []};
             
->>>>>>> mustache
             $(outputElement).empty();
 
             if (count > 0 && searchValue !== "") {
                 $.each(addrBook, function (i, obj) {
                     var isItFound = obj.name.toLowerCase().indexOf(searchValue);
                     if(isItFound !== -1) {
-<<<<<<< HEAD
-                        $(outputElement).append('<p>' + obj.name + ', <a href="mailto:' + obj.email + '">'+ obj.email +'</a><p>');
-                    }
-                });
-            }
-        });
-    },
-=======
                         filteredData.addressBook.push(obj);
                     }
                 });
@@ -76,24 +49,11 @@ var addr = {
         });
     },
 
->>>>>>> mustache
     getAllContacts : function (){
         $.getJSON(options.file, function (data) {
             var addrBook = data.addressBook,
                 count = addrBook.length,
                 outputElement = options.outputElement;
-<<<<<<< HEAD
-
-            $(outputElement).empty();
-            if (count > 0) {
-                $.each(addrBook, function (i, obj) {
-                    $(outputElement).append('<p>' + obj.name + ', <a href="mailto:' + obj.email + '">'+ obj.email +'</a><p>');
-                });
-            }
-        })
-        .fail( function(d, textStatus, error) {
-            console.error(textStatus + " error: " + error);
-=======
             $(outputElement).empty();
             if (count > 0) {
                 $.each(addrBook, function (i, obj) {
@@ -101,7 +61,6 @@ var addr = {
                     $(outputElement).html(rendered);
                 });
             }
->>>>>>> mustache
         }); 
     } // end get all
 }; // end addr 
