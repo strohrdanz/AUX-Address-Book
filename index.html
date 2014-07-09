@@ -32,8 +32,18 @@
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/mustache.js"></script>
 <script src="js/addressbook.js"></script>
 <script src="js/script.js"></script>
-
+<script id="persontpl" type="text/template">
+{{#addressBook}}
+  <p>{{#name}}
+    {{.}} - 
+    {{/name}}
+   {{#email}}
+   {{.}}
+   {{/email}}</p>
+{{/addressBook}}
+</script>
 </body>
 </html>

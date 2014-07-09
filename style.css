@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Average);
+
+body {
+    background: #B4CDCD;
+    margin: 0;
+    font-family: 'Average', serif;
+}
+
+#wrapper {
+    width: 50%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    min-height: 600px;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #5F9F9F;
+}
+
+a:hover {
+    color: #C0D9D9;
+}
+
+.active {
+    background: #C0D9D9;
+}
+
+.hovering {
+     background: #E0EEEE;
+}
+
+#searchbar { 
+    padding: 10px 5px; 
+}
+
+#output2 {
+    background: #f2f2f2;
+}
+
+a, form, #searchbar {
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+}

@@ -6,47 +6,61 @@ $.fn.addressBook = function(options) {
         outputElement: "#output"
     };
 
-    var options = $.extend(defaults, options);
+    var now = Date.now();
+    console.log(now);
 
+    // setInterval(function(){
+    //     var newnow = Date.now();
+    //     var check = newnow - now;
+    //     if (check > 4000) {
+    //         console.log("need to refresh");
+    //     } 
+    //     console.log(newnow);
+    //     console.log(check);
+    // },3000);
+
+    var options = $.extend(defaults, options);
+    var template = $('#persontpl').html();
     return this.each(function(){
 var addr = {
     search : function(event){
+
         event.preventDefault();
 
         $.getJSON(options.file, function (data) {
-
-            var searchValue = $("#input").val(),
+                var searchValue = $("#input").val().toLowerCase(),
                 addrBook = data.addressBook,
                 count = addrBook.length,
-                outputElement = options.outputElement;
-
+                outputElement = options.outputElement,
+                filteredData = {"addressBook": []};
+            
             $(outputElement).empty();
 
             if (count > 0 && searchValue !== "") {
                 $.each(addrBook, function (i, obj) {
-                    var isItFound = obj.name.indexOf(searchValue);
+                    var isItFound = obj.name.toLowerCase().indexOf(searchValue);
                     if(isItFound !== -1) {
-                        $(outputElement).append('<p>' + obj.name + ', <a href="mailto:' + obj.email + '">'+ obj.email +'</a><p>');
+                        filteredData.addressBook.push(obj);
                     }
                 });
+                var rendered = Mustache.render(template, filteredData);
+                $(outputElement).html(rendered);
             }
         });
     },
+
     getAllContacts : function (){
         $.getJSON(options.file, function (data) {
             var addrBook = data.addressBook,
                 count = addrBook.length,
                 outputElement = options.outputElement;
-
             $(outputElement).empty();
             if (count > 0) {
                 $.each(addrBook, function (i, obj) {
-                    $(outputElement).append('<p>' + obj.name + ', <a href="mailto:' + obj.email + '">'+ obj.email +'</a><p>');
+                    var rendered = Mustache.render(template, data);
+                    $(outputElement).html(rendered);
                 });
             }
-        })
-        .fail( function(d, textStatus, error) {
-            console.error(textStatus + " error: " + error);
         }); 
     } // end get all
 }; // end addr 
